@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>أخبار التكنولوجيا</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <header>
@@ -34,6 +35,12 @@
                 <h2>إطلاق أحدث هاتف ذكي</h2>
                 <p>تم إطلاق هاتف XYZ الجديد بمميزات مذهلة.</p>
                 <a href="phones.html">اقرأ المزيد</a>
+                <div class="social-share">
+                    <button class="facebook"><i class="fab fa-facebook-f"></i> مشاركة</button>
+                    <button class="twitter"><i class="fab fa-twitter"></i> تغريد</button>
+                    <button class="whatsapp"><i class="fab fa-whatsapp"></i> واتساب</button>
+                    <button class="telegram"><i class="fab fa-telegram"></i> تلغرام</button>
+                </div>
             </article>
             
             <article>
@@ -41,6 +48,12 @@
                 <h2>حاسب محمول قوي للمطورين</h2>
                 <p>حاسب ABC الجديد هنا، مصمم خصيصاً للمبرمجين.</p>
                 <a href="computers.html">اقرأ المزيد</a>
+                <div class="social-share">
+                    <button class="facebook"><i class="fab fa-facebook-f"></i> مشاركة</button>
+                    <button class="twitter"><i class="fab fa-twitter"></i> تغريد</button>
+                    <button class="whatsapp"><i class="fab fa-whatsapp"></i> واتساب</button>
+                    <button class="telegram"><i class="fab fa-telegram"></i> تلغرام</button>
+                </div>
             </article>
 
             <article>
@@ -48,6 +61,12 @@
                 <h2>تهديدات الأمن السيبراني في 2025</h2>
                 <p>يحذر الخبراء من تزايد عدد الهجمات الإلكترونية.</p>
                 <a href="cybersecurity.html">اقرأ المزيد</a>
+                <div class="social-share">
+                    <button class="facebook"><i class="fab fa-facebook-f"></i> مشاركة</button>
+                    <button class="twitter"><i class="fab fa-twitter"></i> تغريد</button>
+                    <button class="whatsapp"><i class="fab fa-whatsapp"></i> واتساب</button>
+                    <button class="telegram"><i class="fab fa-telegram"></i> تلغرام</button>
+                </div>
             </article>
             
             <article>
@@ -55,6 +74,12 @@
                 <h2>اختراق في الذكاء الاصطناعي</h2>
                 <p>نماذج الذكاء الاصطناعي الجديدة تتفوق على الذكاء البشري في مهام معينة.</p>
                 <a href="ai.html">اقرأ المزيد</a>
+                <div class="social-share">
+                    <button class="facebook"><i class="fab fa-facebook-f"></i> مشاركة</button>
+                    <button class="twitter"><i class="fab fa-twitter"></i> تغريد</button>
+                    <button class="whatsapp"><i class="fab fa-whatsapp"></i> واتساب</button>
+                    <button class="telegram"><i class="fab fa-telegram"></i> تلغرام</button>
+                </div>
             </article>
             
             <article>
@@ -62,6 +87,12 @@
                 <h2>الإعلان عن أجهزة الألعاب القادمة</h2>
                 <p>مستقبل الألعاب هنا مع رسومات وأداء متطور.</p>
                 <a href="gaming.html">اقرأ المزيد</a>
+                <div class="social-share">
+                    <button class="facebook"><i class="fab fa-facebook-f"></i> مشاركة</button>
+                    <button class="twitter"><i class="fab fa-twitter"></i> تغريد</button>
+                    <button class="whatsapp"><i class="fab fa-whatsapp"></i> واتساب</button>
+                    <button class="telegram"><i class="fab fa-telegram"></i> تلغرام</button>
+                </div>
             </article>
 
             <article>
@@ -69,6 +100,12 @@
                 <h2>تحديثات نظام التشغيل الجديد</h2>
                 <p>شركات البرمجيات الكبرى تطرح ميزات جديدة مثيرة.</p>
                 <a href="software.html">اقرأ المزيد</a>
+                <div class="social-share">
+                    <button class="facebook"><i class="fab fa-facebook-f"></i> مشاركة</button>
+                    <button class="twitter"><i class="fab fa-twitter"></i> تغريد</button>
+                    <button class="whatsapp"><i class="fab fa-whatsapp"></i> واتساب</button>
+                    <button class="telegram"><i class="fab fa-telegram"></i> تلغرام</button>
+                </div>
             </article>
         </section>
     </main>
@@ -76,5 +113,29 @@
     <footer>
         <p>جميع الحقوق محفوظة © 2025 أخبار التكنولوجيا</p>
     </footer>
+
+    <script>
+        // Add click event listeners for social share buttons
+        document.querySelectorAll('.social-share button').forEach(button => {
+            button.addEventListener('click', function(e) {
+                const article = this.closest('article');
+                const title = article.querySelector('h2').textContent;
+                const url = window.location.href;
+                
+                let shareUrl = '';
+                if (this.classList.contains('facebook')) {
+                    shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}&quote=${encodeURIComponent(title)}`;
+                } else if (this.classList.contains('twitter')) {
+                    shareUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(title)}&url=${encodeURIComponent(url)}`;
+                } else if (this.classList.contains('whatsapp')) {
+                    shareUrl = `https://wa.me/?text=${encodeURIComponent(title + ' ' + url)}`;
+                } else if (this.classList.contains('telegram')) {
+                    shareUrl = `https://t.me/share/url?url=${encodeURIComponent(url)}&text=${encodeURIComponent(title)}`;
+                }
+                
+                window.open(shareUrl, '_blank', 'width=600,height=400');
+            });
+        });
+    </script>
 </body>
 </html>
