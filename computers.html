@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>الحاسبات - أخبار التكنولوجيا</title>
+    <title>أخبار الحاسبات - أخبار التكنولوجيا</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <header>
@@ -27,27 +28,85 @@
     <main>
         <section class="page-header">
             <h1>أخبار الحاسبات والأجهزة المكتبية</h1>
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="ابحث في أخبار الحاسبات..." aria-label="البحث في أخبار الحاسبات">
+                <button type="button" id="searchButton">
+                    <i class="fas fa-search"></i>
+                    بحث
+                </button>
+            </div>
         </section>
         <section class="news">
             <article>
-                <img src="https://source.unsplash.com/400x250/?macbook" alt="ماك بوك">
-                <h2>آبل تطلق ماك بوك برو بمعالج M3</h2>
-                <p>أداء خارق وعمر بطارية يدوم طويلاً مع الجيل الجديد من معالجات آبل.</p>
-                <a href="#">اقرأ المزيد</a>
+                <img src="https://source.unsplash.com/400x250/?macbook" alt="ماك بوك برو">
+                <h2>آبل تطلق ماك بوك برو بمعالج M3 ماكس</h2>
+                <p>أداء غير مسبوق وعمر بطارية يصل إلى 22 ساعة مع أحدث معالجات آبل.</p>
+                <div class="social-share">
+                    <button class="facebook"><i class="fab fa-facebook-f"></i> مشاركة</button>
+                    <button class="twitter"><i class="fab fa-twitter"></i> تغريد</button>
+                    <button class="whatsapp"><i class="fab fa-whatsapp"></i> واتساب</button>
+                    <button class="telegram"><i class="fab fa-telegram"></i> تلغرام</button>
+                </div>
             </article>
             
             <article>
-                <img src="https://source.unsplash.com/400x250/?desktop" alt="كمبيوتر مكتبي">
-                <h2>أفضل أجهزة الكمبيوتر المكتبية للألعاب</h2>
-                <p>مراجعة شاملة لأقوى أجهزة الكمبيوتر المخصصة للألعاب في 2025.</p>
-                <a href="#">اقرأ المزيد</a>
+                <img src="https://source.unsplash.com/400x250/?desktop-computer" alt="كمبيوتر مكتبي">
+                <h2>إنتل تكشف عن معالجات الجيل الرابع عشر</h2>
+                <p>معالجات جديدة بتقنية 7 نانومتر وأداء يفوق التوقعات للألعاب والتطبيقات المتطورة.</p>
+                <div class="social-share">
+                    <button class="facebook"><i class="fab fa-facebook-f"></i> مشاركة</button>
+                    <button class="twitter"><i class="fab fa-twitter"></i> تغريد</button>
+                    <button class="whatsapp"><i class="fab fa-whatsapp"></i> واتساب</button>
+                    <button class="telegram"><i class="fab fa-telegram"></i> تلغرام</button>
+                </div>
             </article>
 
             <article>
-                <img src="https://source.unsplash.com/400x250/?monitor" alt="شاشات">
-                <h2>ثورة الشاشات المنحنية</h2>
-                <p>كيف تغير الشاشات المنحنية تجربة المستخدم في العمل واللعب.</p>
-                <a href="#">اقرأ المزيد</a>
+                <img src="https://source.unsplash.com/400x250/?gpu" alt="بطاقة رسومات">
+                <h2>إنفيديا تطلق سلسلة RTX 5000</h2>
+                <p>بطاقات رسومات جديدة مع تقنيات متطورة للألعاب والذكاء الاصطناعي.</p>
+                <div class="social-share">
+                    <button class="facebook"><i class="fab fa-facebook-f"></i> مشاركة</button>
+                    <button class="twitter"><i class="fab fa-twitter"></i> تغريد</button>
+                    <button class="whatsapp"><i class="fab fa-whatsapp"></i> واتساب</button>
+                    <button class="telegram"><i class="fab fa-telegram"></i> تلغرام</button>
+                </div>
+            </article>
+            
+            <article>
+                <img src="https://source.unsplash.com/400x250/?laptop-gaming" alt="لابتوب للألعاب">
+                <h2>أسوس تطلق حاسب ROG للألعاب</h2>
+                <p>حاسب محمول مخصص للألعاب مع شاشة 4K وتبريد متطور للأداء العالي.</p>
+                <div class="social-share">
+                    <button class="facebook"><i class="fab fa-facebook-f"></i> مشاركة</button>
+                    <button class="twitter"><i class="fab fa-twitter"></i> تغريد</button>
+                    <button class="whatsapp"><i class="fab fa-whatsapp"></i> واتساب</button>
+                    <button class="telegram"><i class="fab fa-telegram"></i> تلغرام</button>
+                </div>
+            </article>
+            
+            <article>
+                <img src="https://source.unsplash.com/400x250/?computer-monitor" alt="شاشة حاسوب">
+                <h2>سامسونج تطلق شاشة منحنية بمعدل تحديث 500Hz</h2>
+                <p>شاشة جديدة مخصصة للاعبين المحترفين مع تقنيات متطورة لتجربة لعب سلسة.</p>
+                <div class="social-share">
+                    <button class="facebook"><i class="fab fa-facebook-f"></i> مشاركة</button>
+                    <button class="twitter"><i class="fab fa-twitter"></i> تغريد</button>
+                    <button class="whatsapp"><i class="fab fa-whatsapp"></i> واتساب</button>
+                    <button class="telegram"><i class="fab fa-telegram"></i> تلغرام</button>
+                </div>
+            </article>
+
+            <article>
+                <img src="https://source.unsplash.com/400x250/?ssd" alt="قرص صلب">
+                <h2>أقراص SSD بسرعات تصل إلى 20GB/s</h2>
+                <p>تقنية تخزين جديدة تحقق سرعات غير مسبوقة في نقل البيانات.</p>
+                <div class="social-share">
+                    <button class="facebook"><i class="fab fa-facebook-f"></i> مشاركة</button>
+                    <button class="twitter"><i class="fab fa-twitter"></i> تغريد</button>
+                    <button class="whatsapp"><i class="fab fa-whatsapp"></i> واتساب</button>
+                    <button class="telegram"><i class="fab fa-telegram"></i> تلغرام</button>
+                </div>
             </article>
         </section>
     </main>
@@ -55,5 +114,63 @@
     <footer>
         <p>جميع الحقوق محفوظة © 2025 أخبار التكنولوجيا</p>
     </footer>
+
+    <script>
+        // Search functionality
+        const searchInput = document.getElementById('searchInput');
+        const searchButton = document.getElementById('searchButton');
+        const articles = document.querySelectorAll('article');
+
+        function performSearch() {
+            const searchTerm = searchInput.value.trim().toLowerCase();
+            
+            articles.forEach(article => {
+                const title = article.querySelector('h2').textContent.toLowerCase();
+                const content = article.querySelector('p').textContent.toLowerCase();
+                
+                if (title.includes(searchTerm) || content.includes(searchTerm)) {
+                    article.classList.remove('article-hidden');
+                } else {
+                    article.classList.add('article-hidden');
+                }
+            });
+        }
+
+        searchButton.addEventListener('click', performSearch);
+        searchInput.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                performSearch();
+            }
+        });
+
+        // Clear search when input is cleared
+        searchInput.addEventListener('input', function() {
+            if (this.value === '') {
+                articles.forEach(article => article.classList.remove('article-hidden'));
+            }
+        });
+
+        // Social sharing functionality
+        document.querySelectorAll('.social-share button').forEach(button => {
+            button.addEventListener('click', function(e) {
+                const article = this.closest('article');
+                const title = article.querySelector('h2').textContent;
+                const url = window.location.href;
+                
+                let shareUrl = '';
+                if (this.classList.contains('facebook')) {
+                    shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}&quote=${encodeURIComponent(title)}`;
+                } else if (this.classList.contains('twitter')) {
+                    shareUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(title)}&url=${encodeURIComponent(url)}`;
+                } else if (this.classList.contains('whatsapp')) {
+                    shareUrl = `https://wa.me/?text=${encodeURIComponent(title + ' ' + url)}`;
+                } else if (this.classList.contains('telegram')) {
+                    shareUrl = `https://t.me/share/url?url=${encodeURIComponent(url)}&text=${encodeURIComponent(title)}`;
+                }
+                
+                window.open(shareUrl, '_blank', 'width=600,height=400');
+            });
+        });
+    </script>
 </body>
 </html>
