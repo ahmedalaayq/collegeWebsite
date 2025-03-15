@@ -6,6 +6,24 @@
     <title>أخبار الهواتف - أخبار التكنولوجيا</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .article-content {
+            max-height: 100px;
+            overflow: hidden;
+        }
+        .article-full-content {
+            display: none;
+        }
+        .article-expand:checked + .article-content .article-full-content {
+            display: block;
+        }
+        .article-expand:checked + .article-content {
+            max-height: 100%;
+        }
+        .read-more {
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -38,9 +56,17 @@
         </section>
         <section class="news">
             <article>
-                <img src="https://source.unsplash.com/400x250/?iphone" alt="آيفون 15">
+                <img src="https://images.unsplash.com/photo-1632661674596-df8be070a5c5?w=400" alt="آيفون 15">
                 <h2>آيفون 15 برو ماكس: مراجعة شاملة</h2>
-                <p>مراجعة تفصيلية لأحدث هواتف آبل مع التركيز على الكاميرا المتطورة والأداء الفائق.</p>
+                <input type="checkbox" class="article-expand" id="article1">
+                <div class="article-content">
+                    <p>مراجعة تفصيلية لأحدث هواتف آبل مع التركيز على الكاميرا المتطورة والأداء الفائق.</p>
+                    <div class="article-full-content">
+                        <p>يأتي آيفون 15 برو ماكس بشاشة OLED مقاس 6.7 بوصة بدقة فائقة ومعدل تحديث 120 هرتز. يتميز الهاتف بنظام كاميرا ثلاثي يتضمن كاميرا رئيسية بدقة 48 ميجابكسل، وكاميرا واسعة الزاوية، وكاميرا مقربة مع تقريب بصري 5x.</p>
+                        <p>المعالج A17 Pro يوفر أداءً استثنائياً في الألعاب والتطبيقات المتطورة، مع تحسين كفاءة استهلاك البطارية. يدعم الهاتف شحن سريع بقدرة 27 واط وشحن لاسلكي MagSafe بقدرة 15 واط.</p>
+                    </div>
+                </div>
+                <label for="article1" class="read-more">اقرأ المزيد</label>
                 <div class="social-share">
                     <button class="facebook"><i class="fab fa-facebook-f"></i> مشاركة</button>
                     <button class="twitter"><i class="fab fa-twitter"></i> تغريد</button>
@@ -50,9 +76,17 @@
             </article>
             
             <article>
-                <img src="https://source.unsplash.com/400x250/?samsung" alt="سامسونج جالكسي">
+                <img src="https://images.unsplash.com/photo-1610945415295-d9bbf067e59c?w=400" alt="سامسونج جالكسي">
                 <h2>سامسونج تكشف عن سلسلة جالكسي S25</h2>
-                <p>مواصفات وميزات الجيل الجديد من هواتف سامسونج الرائدة مع تحسينات في الذكاء الاصطناعي.</p>
+                <input type="checkbox" class="article-expand" id="article2">
+                <div class="article-content">
+                    <p>مواصفات وميزات الجيل الجديد من هواتف سامسونج الرائدة مع تحسينات في الذكاء الاصطناعي.</p>
+                    <div class="article-full-content">
+                        <p>تقدم سامسونج في سلسلة جالكسي S25 تحسينات كبيرة في الأداء والكاميرا. يأتي الهاتف مع معالج Snapdragon 8 Gen 3 المتطور، وشاشة Dynamic AMOLED 2X بمعدل تحديث متكيف يصل إلى 144 هرتز.</p>
+                        <p>تم تطوير نظام الكاميرا بالكامل مع مستشعر رئيسي بدقة 200 ميجابكسل وتقنيات ذكاء اصطناعي متقدمة لتحسين جودة الصور في جميع ظروف الإضاءة.</p>
+                    </div>
+                </div>
+                <label for="article2" class="read-more">اقرأ المزيد</label>
                 <div class="social-share">
                     <button class="facebook"><i class="fab fa-facebook-f"></i> مشاركة</button>
                     <button class="twitter"><i class="fab fa-twitter"></i> تغريد</button>
@@ -62,9 +96,17 @@
             </article>
 
             <article>
-                <img src="https://source.unsplash.com/400x250/?xiaomi" alt="شاومي">
+                <img src="https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=400" alt="شاومي">
                 <h2>شاومي تطلق هاتفها القابل للطي الجديد</h2>
-                <p>تفاصيل حول أحدث هواتف شاومي القابلة للطي مع شاشة متطورة وتصميم مبتكر.</p>
+                <input type="checkbox" class="article-expand" id="article3">
+                <div class="article-content">
+                    <p>تفاصيل حول أحدث هواتف شاومي القابلة للطي مع شاشة متطورة وتصميم مبتكر.</p>
+                    <div class="article-full-content">
+                        <p>يتميز هاتف شاومي القابل للطي الجديد بشاشة مرنة مقاس 8.02 بوصة عند فتحها، وشاشة خارجية 6.5 بوصة. يستخدم الهاتف مفصلاً متطوراً يضمن متانة عالية مع إمكانية طي الشاشة بزاوية مختلفة.</p>
+                        <p>يدعم الهاتف القلم الإلكتروني ويأتي مع معالج Snapdragon 8 Gen 3 وذاكرة وصول عشوائي 16 جيجابايت، مما يوفر أداءً استثنائياً في جميع المهام.</p>
+                    </div>
+                </div>
+                <label for="article3" class="read-more">اقرأ المزيد</label>
                 <div class="social-share">
                     <button class="facebook"><i class="fab fa-facebook-f"></i> مشاركة</button>
                     <button class="twitter"><i class="fab fa-twitter"></i> تغريد</button>
@@ -74,9 +116,17 @@
             </article>
             
             <article>
-                <img src="https://source.unsplash.com/400x250/?huawei" alt="هواوي">
+                <img src="https://images.unsplash.com/photo-1595941069915-4ebc5197c14a?w=400" alt="هواوي">
                 <h2>هواوي تتحدى العقوبات بهاتف جديد</h2>
-                <p>إطلاق هاتف متطور من هواوي يتحدى العقوبات التجارية مع نظام تشغيل مطور داخلياً.</p>
+                <input type="checkbox" class="article-expand" id="article4">
+                <div class="article-content">
+                    <p>إطلاق هاتف متطور من هواوي يتحدى العقوبات التجارية مع نظام تشغيل مطور داخلياً.</p>
+                    <div class="article-full-content">
+                        <p>أطلقت هواوي هاتفها الجديد مع نظام HarmonyOS 4.0 المطور داخلياً، والذي يوفر تجربة مستخدم سلسة مع دعم كامل للتطبيقات المحلية والعالمية.</p>
+                        <p>يتميز الهاتف بمعالج Kirin المطور من قبل الشركة، مع كاميرا متطورة بالتعاون مع Leica وبطارية تدعم الشحن السريع بقدرة 100 واط.</p>
+                    </div>
+                </div>
+                <label for="article4" class="read-more">اقرأ المزيد</label>
                 <div class="social-share">
                     <button class="facebook"><i class="fab fa-facebook-f"></i> مشاركة</button>
                     <button class="twitter"><i class="fab fa-twitter"></i> تغريد</button>
@@ -86,9 +136,17 @@
             </article>
             
             <article>
-                <img src="https://source.unsplash.com/400x250/?smartphone-camera" alt="كاميرا هاتف">
+                <img src="https://images.unsplash.com/photo-1616423640778-28d7748b04a3?w=400" alt="كاميرا هاتف">
                 <h2>ثورة في تصوير الهواتف الذكية</h2>
-                <p>تقنيات جديدة في التصوير الفوتوغرافي للهواتف الذكية تنافس الكاميرات الاحترافية.</p>
+                <input type="checkbox" class="article-expand" id="article5">
+                <div class="article-content">
+                    <p>تقنيات جديدة في التصوير الفوتوغرافي للهواتف الذكية تنافس الكاميرات الاحترافية.</p>
+                    <div class="article-full-content">
+                        <p>تطورات جديدة في تقنيات التصوير بالهواتف الذكية تشمل مستشعرات أكبر حجماً وتقنيات معالجة متقدمة تعتمد على الذكاء الاصطناعي.</p>
+                        <p>تقنيات جديدة للتصوير الليلي وتصوير البورتريه تضاهي جودة الكاميرات الاحترافية، مع إمكانيات متقدمة في تصوير الفيديو بدقة 8K.</p>
+                    </div>
+                </div>
+                <label for="article5" class="read-more">اقرأ المزيد</label>
                 <div class="social-share">
                     <button class="facebook"><i class="fab fa-facebook-f"></i> مشاركة</button>
                     <button class="twitter"><i class="fab fa-twitter"></i> تغريد</button>
@@ -98,9 +156,17 @@
             </article>
 
             <article>
-                <img src="https://source.unsplash.com/400x250/?phone-battery" alt="بطارية هاتف">
+                <img src="https://images.unsplash.com/photo-1676312030580-22c3d5a2e8d8?w=400" alt="بطارية هاتف">
                 <h2>تقنية شحن جديدة: من 0 إلى 100% في 5 دقائق</h2>
-                <p>ابتكار تقنية شحن ثورية للهواتف الذكية تقلل وقت الشحن بشكل كبير.</p>
+                <input type="checkbox" class="article-expand" id="article6">
+                <div class="article-content">
+                    <p>ابتكار تقنية شحن ثورية للهواتف الذكية تقلل وقت الشحن بشكل كبير.</p>
+                    <div class="article-full-content">
+                        <p>تطوير تقنية شحن جديدة تستخدم مواد نانوية متقدمة تسمح بشحن البطارية بشكل آمن وسريع للغاية، مع الحفاظ على عمر البطارية على المدى الطويل.</p>
+                        <p>التقنية الجديدة تدعم الشحن بقدرة 200 واط مع نظام تبريد متطور يمنع ارتفاع درجة حرارة البطارية أثناء الشحن.</p>
+                    </div>
+                </div>
+                <label for="article6" class="read-more">اقرأ المزيد</label>
                 <div class="social-share">
                     <button class="facebook"><i class="fab fa-facebook-f"></i> مشاركة</button>
                     <button class="twitter"><i class="fab fa-twitter"></i> تغريد</button>

@@ -6,6 +6,24 @@
     <title>أخبار الذكاء الاصطناعي - أخبار التكنولوجيا</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .article-content {
+            max-height: 100px;
+            overflow: hidden;
+        }
+        .article-full-content {
+            display: none;
+        }
+        .article-expand:checked + .article-content .article-full-content {
+            display: block;
+        }
+        .article-expand:not(:checked) + .article-content .article-full-content {
+            display: none;
+        }
+        .read-more {
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -38,9 +56,17 @@
         </section>
         <section class="news">
             <article>
-                <img src="https://source.unsplash.com/400x250/?artificial-intelligence" alt="ذكاء اصطناعي">
+                <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=400" alt="ذكاء اصطناعي">
                 <h2>نماذج لغوية جديدة تتفوق على البشر</h2>
-                <p>تطوير نماذج لغوية متقدمة قادرة على فهم وإنتاج النصوص بدقة تفوق القدرات البشرية.</p>
+                <input type="checkbox" class="article-expand" id="ai-article1">
+                <div class="article-content">
+                    <p>تطوير نماذج لغوية متقدمة قادرة على فهم وإنتاج النصوص بدقة تفوق القدرات البشرية.</p>
+                    <div class="article-full-content">
+                        <p>تمثل النماذج اللغوية الجديدة قفزة نوعية في مجال معالجة اللغات الطبيعية، حيث تستطيع فهم السياق وإنتاج محتوى يضاهي الكتابة البشرية في الجودة والدقة.</p>
+                        <p>تستخدم هذه النماذج تقنيات متقدمة في التعلم العميق وتحليل البيانات، مما يمكنها من التعامل مع مختلف اللغات والأساليب الأدبية بكفاءة عالية.</p>
+                    </div>
+                </div>
+                <label for="ai-article1" class="read-more">اقرأ المزيد</label>
                 <div class="social-share">
                     <button class="facebook"><i class="fab fa-facebook-f"></i> مشاركة</button>
                     <button class="twitter"><i class="fab fa-twitter"></i> تغريد</button>
@@ -50,9 +76,17 @@
             </article>
             
             <article>
-                <img src="https://source.unsplash.com/400x250/?robot" alt="روبوت">
+                <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400" alt="روبوت">
                 <h2>روبوتات ذكية للرعاية الصحية</h2>
-                <p>تطوير روبوتات متقدمة مزودة بالذكاء الاصطناعي للمساعدة في الرعاية الصحية والعمليات الجراحية.</p>
+                <input type="checkbox" class="article-expand" id="ai-article2">
+                <div class="article-content">
+                    <p>تطوير روبوتات متقدمة مزودة بالذكاء الاصطناعي للمساعدة في الرعاية الصحية والعمليات الجراحية.</p>
+                    <div class="article-full-content">
+                        <p>تم تطوير جيل جديد من الروبوتات الطبية المزودة بأنظمة ذكاء اصطناعي متقدمة، قادرة على المساعدة في العمليات الجراحية الدقيقة وتقديم الرعاية للمرضى.</p>
+                        <p>هذه الروبوتات مجهزة بأجهزة استشعار متطورة وخوارزميات تعلم آلي تمكنها من التفاعل بشكل طبيعي مع المرضى والطاقم الطبي.</p>
+                    </div>
+                </div>
+                <label for="ai-article2" class="read-more">اقرأ المزيد</label>
                 <div class="social-share">
                     <button class="facebook"><i class="fab fa-facebook-f"></i> مشاركة</button>
                     <button class="twitter"><i class="fab fa-twitter"></i> تغريد</button>
@@ -62,9 +96,17 @@
             </article>
 
             <article>
-                <img src="https://source.unsplash.com/400x250/?machine-learning" alt="تعلم آلي">
+                <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=400" alt="تعلم آلي">
                 <h2>تقنيات جديدة في التعلم العميق</h2>
-                <p>ابتكارات في مجال التعلم العميق تمكن من تدريب النماذج بكفاءة أعلى وموارد أقل.</p>
+                <input type="checkbox" class="article-expand" id="ai-article3">
+                <div class="article-content">
+                    <p>ابتكارات في مجال التعلم العميق تمكن من تدريب النماذج بكفاءة أعلى وموارد أقل.</p>
+                    <div class="article-full-content">
+                        <p>تم تطوير خوارزميات جديدة للتعلم العميق تقلل من الوقت والموارد المطلوبة لتدريب النماذج الضخمة، مع تحسين دقة النتائج.</p>
+                        <p>هذه التقنيات تفتح المجال لتطبيقات جديدة في مجالات متعددة مثل الرؤية الحاسوبية ومعالجة اللغات الطبيعية.</p>
+                    </div>
+                </div>
+                <label for="ai-article3" class="read-more">اقرأ المزيد</label>
                 <div class="social-share">
                     <button class="facebook"><i class="fab fa-facebook-f"></i> مشاركة</button>
                     <button class="twitter"><i class="fab fa-twitter"></i> تغريد</button>
@@ -74,9 +116,17 @@
             </article>
             
             <article>
-                <img src="https://source.unsplash.com/400x250/?autonomous-car" alt="سيارة ذاتية القيادة">
+                <img src="https://images.unsplash.com/photo-1553729459-efe14ef6055d?w=400" alt="سيارة ذاتية القيادة">
                 <h2>تطورات في السيارات ذاتية القيادة</h2>
-                <p>تقنيات الذكاء الاصطناعي تحسن أداء وسلامة السيارات ذاتية القيادة في الظروف المختلفة.</p>
+                <input type="checkbox" class="article-expand" id="ai-article4">
+                <div class="article-content">
+                    <p>تقنيات الذكاء الاصطناعي تحسن أداء وسلامة السيارات ذاتية القيادة في الظروف المختلفة.</p>
+                    <div class="article-full-content">
+                        <p>تطورات جديدة في أنظمة الرؤية الحاسوبية والتعلم الآلي تمكن السيارات ذاتية القيادة من التعامل مع مختلف الظروف المناخية والطرق المعقدة.</p>
+                        <p>تحسينات في أنظمة اتخاذ القرار تجعل القيادة الذاتية أكثر أماناً وموثوقية في المناطق الحضرية المزدحمة.</p>
+                    </div>
+                </div>
+                <label for="ai-article4" class="read-more">اقرأ المزيد</label>
                 <div class="social-share">
                     <button class="facebook"><i class="fab fa-facebook-f"></i> مشاركة</button>
                     <button class="twitter"><i class="fab fa-twitter"></i> تغريد</button>
@@ -86,9 +136,17 @@
             </article>
             
             <article>
-                <img src="https://source.unsplash.com/400x250/?ai-art" alt="فن رقمي">
+                <img src="https://images.unsplash.com/photo-1608507777998-7b1a2a641096?w=400" alt="فن رقمي">
                 <h2>الذكاء الاصطناعي في الفن والإبداع</h2>
-                <p>نماذج جديدة قادرة على إنتاج أعمال فنية وموسيقية تنافس إبداعات الفنانين البشريين.</p>
+                <input type="checkbox" class="article-expand" id="ai-article5">
+                <div class="article-content">
+                    <p>نماذج جديدة قادرة على إنتاج أعمال فنية وموسيقية تنافس إبداعات الفنانين البشريين.</p>
+                    <div class="article-full-content">
+                        <p>تطوير نماذج ذكاء اصطناعي متخصصة في إنتاج الفن والموسيقى، قادرة على فهم الأنماط الفنية وإنتاج أعمال إبداعية أصيلة.</p>
+                        <p>دمج تقنيات التعلم العميق مع الخبرة الفنية البشرية لإنتاج أعمال تجمع بين الإبداع التقني والحس الفني.</p>
+                    </div>
+                </div>
+                <label for="ai-article5" class="read-more">اقرأ المزيد</label>
                 <div class="social-share">
                     <button class="facebook"><i class="fab fa-facebook-f"></i> مشاركة</button>
                     <button class="twitter"><i class="fab fa-twitter"></i> تغريد</button>
@@ -98,9 +156,17 @@
             </article>
 
             <article>
-                <img src="https://source.unsplash.com/400x250/?quantum-computer" alt="حاسوب كمي">
+                <img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=400" alt="حاسوب كمي">
                 <h2>الذكاء الاصطناعي والحوسبة الكمية</h2>
-                <p>دمج تقنيات الذكاء الاصطناعي مع الحوسبة الكمية لحل المشكلات المعقدة.</p>
+                <input type="checkbox" class="article-expand" id="ai-article6">
+                <div class="article-content">
+                    <p>دمج تقنيات الذكاء الاصطناعي مع الحوسبة الكمية لحل المشكلات المعقدة.</p>
+                    <div class="article-full-content">
+                        <p>تطوير خوارزميات هجينة تجمع بين قوة الحوسبة الكمية وقدرات الذكاء الاصطناعي لحل مشكلات معقدة في مجالات العلوم والطب والتشفير.</p>
+                        <p>نتائج واعدة في استخدام الحواسيب الكمية لتسريع تدريب نماذج التعلم العميق وتحسين أدائها.</p>
+                    </div>
+                </div>
+                <label for="ai-article6" class="read-more">اقرأ المزيد</label>
                 <div class="social-share">
                     <button class="facebook"><i class="fab fa-facebook-f"></i> مشاركة</button>
                     <button class="twitter"><i class="fab fa-twitter"></i> تغريد</button>

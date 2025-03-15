@@ -104,17 +104,19 @@ main {
 
 .news {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 2rem;
+    padding: 2rem;
 }
 
 article {
-    background-color: white;
+    background: white;
     border-radius: 8px;
-    overflow: hidden;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    transition: all 0.3s ease;
-    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
 }
 
 article:hover {
@@ -126,24 +128,32 @@ article img {
     width: 100%;
     height: 250px;
     object-fit: cover;
-    transition: transform 0.3s ease;
+    display: block;
+    border-radius: 8px 8px 0 0;
+    background-color: #f0f0f0;
+    position: relative;
 }
 
-article:hover img {
-    transform: scale(1.05);
+article img::before {
+    content: "جاري التحميل...";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #666;
+    font-size: 1rem;
 }
 
 article h2 {
-    padding: 1rem;
-    color: #2c3e50;
-    font-size: 1.4rem;
+    margin: 1rem;
+    font-size: 1.5rem;
+    color: #333;
 }
 
 article p {
-    padding: 0 1rem;
+    margin: 0 1rem 1rem;
     color: #666;
-    margin-bottom: 1rem;
-    font-size: 1.1rem;
+    line-height: 1.6;
 }
 
 article a {
@@ -179,6 +189,55 @@ article a:hover {
     background-color: #2980b9;
     transform: translateY(-2px);
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* Article content and read more styles */
+.article-content {
+    max-height: 100px;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+    margin-bottom: 10px;
+}
+
+.article-expand {
+    display: none;
+}
+
+.article-full-content {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease-in;
+}
+
+.article-expand:checked + .article-content {
+    max-height: 1000px;
+}
+
+.article-expand:checked + .article-content .article-full-content {
+    display: block;
+    opacity: 1;
+}
+
+.read-more {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: #2c3e50;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px 0;
+    transition: background-color 0.3s ease;
+}
+
+.read-more:hover {
+    background-color: #34495e;
+}
+
+/* RTL support for article content */
+.article-content p {
+    text-align: right;
+    line-height: 1.6;
+    margin-bottom: 15px;
 }
 
 /* Contact Form Styles */
@@ -286,32 +345,29 @@ article a:hover {
 /* Social Share Buttons */
 .social-share {
     display: flex;
-    gap: 0.5rem;
-    padding: 0 1rem 1rem;
+    gap: 10px;
     justify-content: flex-end;
+    margin-top: 15px;
 }
 
 .social-share button {
+    padding: 8px 15px;
     border: none;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
+    border-radius: 5px;
     color: white;
     cursor: pointer;
-    font-family: inherit;
-    font-size: 0.9rem;
+    transition: opacity 0.3s ease;
     display: flex;
     align-items: center;
-    gap: 0.5rem;
-    transition: all 0.3s ease;
+    gap: 5px;
 }
 
 .social-share button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    opacity: 0.9;
 }
 
 .social-share .facebook {
-    background-color: #1877f2;
+    background-color: #3b5998;
 }
 
 .social-share .twitter {
@@ -324,6 +380,10 @@ article a:hover {
 
 .social-share .telegram {
     background-color: #0088cc;
+}
+
+.social-share i {
+    font-size: 14px;
 }
 
 /* Search Bar Styles */
@@ -404,6 +464,11 @@ footer {
     
     .news {
         grid-template-columns: 1fr;
+        padding: 1rem;
+    }
+    
+    article img {
+        height: 200px;
     }
     
     .page-header h1 {
